@@ -1,0 +1,28 @@
+name: Share a compatibility result
+description: Help document which macOS versions work.
+body:
+  - type: markdown
+    attributes:
+      value: Please omit identifying information. One success does not establish compatibility for every Mac.
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and build
+    validations:
+      required: true
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: Mac architecture
+      options: [Apple silicon, Intel, Unknown]
+  - type: input
+    id: helper
+    attributes:
+      label: Helper version or commit
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Result after restart
+      description: Did the Settings enrollment request disappear? Has it returned after another restart or update?
+    validations:
+      required: true
