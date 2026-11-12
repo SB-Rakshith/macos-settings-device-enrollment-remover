@@ -56,7 +56,7 @@ Find the entry marked `(Data)` for the intended installation. Disk identifiers c
 Download the file first; do not pipe a download directly into Bash:
 
 ```sh
-curl -fL https://raw.githubusercontent.com/SB-Rakshith/macos-enrollment-marker-guide/main/enrollment-markers.sh -o /tmp/enrollment-markers.sh
+curl -fL https://raw.githubusercontent.com/SB-Rakshith/macos-settings-device-enrollment-remover/main/enrollment-markers.sh -o /tmp/enrollment-markers.sh
 ```
 
 Continue only if the download succeeds. Then check syntax:
