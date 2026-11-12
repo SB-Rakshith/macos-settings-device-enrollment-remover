@@ -1,0 +1,16 @@
+name: Shell checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  isolated-tests:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Syntax
+        run: bash -n enrollment-markers.sh tests/backup-restore.sh
+      - name: Isolated backup and restore tests
+        run: bash tests/backup-restore.sh
