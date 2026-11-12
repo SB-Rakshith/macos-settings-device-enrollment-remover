@@ -1,0 +1,30 @@
+name: Report a problem
+description: Report an error from the helper or a request that did not clear.
+body:
+  - type: markdown
+    attributes:
+      value: Hide passwords, recovery keys, serial numbers, email addresses, and organization identifiers. Never upload complete enrollment records.
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and build
+    validations:
+      required: true
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: Mac architecture
+      options: [Apple silicon, Intel, Unknown]
+    validations:
+      required: true
+  - type: input
+    id: helper
+    attributes:
+      label: Helper version or commit
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the stage, sanitized error, and whether you were in Recovery. State whether apply or restore completed. Keep your backups.
+    validations:
+      required: true
